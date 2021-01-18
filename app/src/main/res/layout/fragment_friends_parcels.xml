@@ -1,0 +1,178 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <TextView
+        android:id="@+id/postManAddressTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:text="Enter Your Address:"></TextView>
+    <EditText
+        android:id="@+id/postManAddress"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimaryDark"
+        android:textAppearance="?attr/textAppearanceListItem">
+    </EditText>
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/LightGray"
+        android:layout_marginLeft="16dp"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:text="Enter biggest filter first,then if more filter is desired enter a smaller number:"></TextView>
+
+    <SearchView
+        android:id="@+id/filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:iconifiedByDefault="true"
+        android:padding="2dp"
+        android:outlineSpotShadowColor="@color/colorPrimary"
+        android:queryHint=" enter max distance of delivery" />
+    <Button
+        android:id="@+id/fillterButton"
+        android:layout_width="247dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/colorPrimary"
+        android:onClick="call"
+        android:text="Click To Filter Parcels"
+        android:textColor="@color/Black"
+        android:textSize="14sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Parcels You Could/Offer To PickUp:"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="23dp"
+        android:layout_weight="7" />
+
+    <ScrollView
+        android:id="@+id/detailsDrive"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:layout_weight="0"
+        android:background="@color/LightGray"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:outlineSpotShadowColor="@color/colorPrimary"
+        android:visibility="invisible"
+        tools:ignore="MissingConstraints">
+
+
+        <LinearLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:outlineAmbientShadowColor="@color/colorPrimary">
+
+
+            <TextView
+                android:id="@+id/parcelIdAndName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="Name: "></TextView>
+
+            <CheckBox
+                android:id="@+id/checkboxOffer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:enabled="true"
+                android:text="Offer To Pick Up Parcel" />
+
+            <TextView
+                android:id="@+id/warning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:textColor="@color/colorPrimary"
+                tools:text="will be enabled only if recipient approves you to pick up parcel:"
+                tools:visibility="visible">
+
+            </TextView>
+
+
+            <CheckBox
+                android:id="@+id/checkboxPickUP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:enabled="false"
+                android:text="Pick Up Parcel" />
+
+            <Button
+                android:id="@+id/buttonMAIL"
+                android:layout_width="247dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/colorPrimary"
+                android:enabled="false"
+                android:onClick="sensEmail"
+                android:text="send conformation email"
+                android:textColor="@color/LightGray" />
+
+            <Button
+                android:id="@+id/buttonSMS"
+                android:layout_width="247dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/colorPrimary"
+                android:enabled="false"
+                android:onClick="sendSMS"
+                android:text="send conformation SMS"
+                android:textColor="@color/LightGray"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/buttonCALL"
+                android:layout_width="247dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/colorPrimary"
+                android:enabled="false"
+                android:onClick="call"
+                android:text="call recipient"
+                android:textColor="@color/LightGray"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/buttonCLOSE"
+                android:layout_width="81dp"
+                android:layout_height="40dp"
+                android:layout_margin="16dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:text="Back" />
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

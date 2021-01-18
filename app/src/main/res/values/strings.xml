@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">SPM</string>
+    <string name="title_activity_navigation_drawer">NavigationDrawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">SPM</string>
+    <string name="nav_header_subtitle">Menu</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_exit">Back To Sign in</string>
+    <string name="menu_registered_parcels">RegisteredParcels</string>
+    <string name="menu_friends_parcels">FriendsParcels</string>
+    <string name="FriendsParcels">FriendsParcels</string>
+    <string name="RegisteredParcels">RegisteredParcels</string>
+
+</resources>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/main"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_FriendsParcels"
+            android:icon="@drawable/friends"
+            android:title="@string/menu_friends_parcels" />
+        <item
+            android:id="@+id/nav_RegisteredParcels"
+            android:icon="@drawable/registered"
+            android:title="@string/menu_registered_parcels"
+            />
+    </group>
+
+    <item android:title="Exit">
+        <menu>
+
+            <item
+                android:id="@+id/nav_exit"
+                android:icon="@drawable/exit"
+                android:title="@string/menu_exit" />
+        </menu>
+    </item>
+
+</menu>

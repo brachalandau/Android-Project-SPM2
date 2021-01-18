@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.spm2.UI.FragmentsPlusViewModels.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_FriendsParcels"
+        android:name="com.example.spm2.UI.FragmentsPlusViewModels.FriendsParcels.FriendsParcelsFragment"
+        android:label="@string/menu_friends_parcels"
+        tools:layout="@layout/fragment_friends_parcels" />
+
+
+    <fragment
+        android:id="@+id/nav_RegisteredParcels"
+        android:name="com.example.spm2.UI.FragmentsPlusViewModels.RegisteredParcels.RegisteredParcelsFragment"
+        android:label="@string/menu_registered_parcels"
+        tools:layout="@layout/fragment_registered_parcels" />
+    <fragment
+        android:id="@+id/nav_share"
+        android:name="com.example.spm2.UI.FragmentsPlusViewModels.share.ShareFragment"
+        android:label="@string/menu_registered_parcels"
+        tools:layout="@layout/fragment_registered_parcels" />
+
+    <fragment
+        android:id="@+id/nav_exit"
+        android:name="com.example.spm2.UI.FragmentsPlusViewModels.exit.ExitFragment"
+        android:label="@string/menu_exit"
+        tools:layout="@layout/fragment_exit" />
+</navigation>
